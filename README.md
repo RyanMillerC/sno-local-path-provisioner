@@ -10,6 +10,11 @@ lab/development/testing purposes only and is NOT intended for production use.**
 Leverage [OpenShift Data Foundation] on a full OpenShift cluster for production
 use.
 
+local-path-provisioner works by creating directories for PVs under
+`/opt/local-path-provisioner`. On CoreOS, `/opt` is a symlink under `/var`. You
+will need to make sure there is approperiate space on `/var` and monitor usage
+to prevent over-allocating storage space.
+
 ## Deploy
 
 This Help chart takes in no values. To deploy, run:
