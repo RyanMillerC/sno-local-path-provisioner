@@ -40,6 +40,8 @@ $ oc label storageclass local-path storageclass.kubernetes.io/is-default-class=t
 
 [local-path-provisioner]: https://github.com/rancher/local-path-provisioner
 [mit license]: https://img.shields.io/badge/License-MIT-blue.svg
+[openshift data foundation]:
+  https://www.redhat.com/en/technologies/cloud-computing/openshift-data-foundation
 [sno (single-node openshift)]:
   https://www.redhat.com/en/blog/meet-single-node-openshift-our-smallest-openshift-footprint-edge-architectures
 
