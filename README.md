@@ -31,7 +31,7 @@ The chart does not set `local-path` as the default storage class. To set it as
 the default storage class, run:
 
 ```bash
-$ oc label storageclass local-path storageclass.kubernetes.io/is-default-class=true
+$ oc annotate storageclass local-path storageclass.kubernetes.io/is-default-class=true
 ```
 
 ## License
