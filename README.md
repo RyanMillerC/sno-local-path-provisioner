@@ -18,6 +18,17 @@ This Help chart takes in no values. To deploy, run:
 $ helm install local-path-provisioner .
 ```
 
+The chart creates a MachineConfig that takes a few minutes to deploy. The
+console will be temporarily unavailable while the MachineConfig is deploying.
+Once complete, you will have a `local-path` StorageClass.
+
+The chart does not set `local-path` as the default storage class. To set it as
+the default storage class, run:
+
+```bash
+$ oc label storageclass local-path storageclass.kubernetes.io/is-default-class=true
+```
+
 ## License
 
 [![MIT license]](https://lbesson.mit-license.org/)
