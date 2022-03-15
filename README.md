@@ -12,6 +12,8 @@ use.
 
 ## Deploy
 
+This Help chart takes in no values. To deploy, run:
+
 ```
 $ helm install local-path-provisioner .
 ```
