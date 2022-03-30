@@ -2,5 +2,9 @@ apiVersion: v2
 name: sno-local-path-provisioner
 description: "Deploy locah-path-provisioner (dynamic filesystem StorageClass) to a SNO (Single Node OpenShift) instance"
 type: application
-version: 1.0.0
+version: 1.1.0
 appVersion: "v0.0.21"
+dependencies:
+  - name: local-path-provisioner
+    version: "~0.0.21"
+    repo: "https://raw.githubusercontent.com/rancher/local-path-provisioner/master/deploy/chart"
