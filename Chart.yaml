@@ -7,4 +7,4 @@ appVersion: "v0.0.21"
 dependencies:
   - name: local-path-provisioner
     version: "~0.0.21"
-    repo: "https://raw.githubusercontent.com/rancher/local-path-provisioner/master/deploy/chart"
+    repository: "file://./dependencies/local-path-provisioner/deploy/chart/local-path-provisioner"
