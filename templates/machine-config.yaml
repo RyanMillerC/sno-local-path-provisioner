@@ -10,27 +10,16 @@ spec:
       version: 2.2.0
     systemd:
       units:
-        - name: local-path-provisioner-directory.service
-          enabled: true
-          contents: |
-            [Unit]
-            Description=Create local-path provisioner directory /opt/local-path-provisioner
-            Before=kubelet.service
-
-            [Service]
-            ExecStart=/bin/mkdir -p /opt/local-path-provisioner
-
-            [Install]
-            WantedBy=local-path-provisioner.service
         - name: local-path-provisioner.service
           enabled: true
           contents: |
             [Unit]
-            Description=Set SELinux chcon for local-path provisioner
+            Description=Create and set SELinux contenxt on local-path-provisioner directory
             Before=kubelet.service
 
             [Service]
-            ExecStart=/usr/bin/chcon -Rt container_file_t /opt/local-path-provisioner
+            ExecStart=/bin/mkdir -p /opt/local-path-provisioner && \
+                      /usr/bin/chcon -Rt container_file_t /opt/local-path-provisioner
 
             [Install]
             WantedBy=multi-user.target
