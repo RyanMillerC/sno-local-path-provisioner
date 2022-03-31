@@ -20,7 +20,10 @@ to prevent over-allocating storage space.
 This Help chart takes in no values. To deploy, run:
 
 ```
-$ helm install local-path-provisioner .
+$ helm install \
+    --create-namespace \
+    --namespace local-path-storage \
+    local-path-provisioner .
 ```
 
 The chart creates a MachineConfig that takes a few minutes to deploy. The
