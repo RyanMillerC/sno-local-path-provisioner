@@ -18,8 +18,8 @@ spec:
             Before=kubelet.service
 
             [Service]
-            ExecStart=/bin/mkdir -p /opt/local-path-provisioner && \
-                      /usr/bin/chcon -Rt container_file_t /opt/local-path-provisioner
+            ExecStartPre=/bin/mkdir -p /opt/local-path-provisioner
+            ExecStart=/usr/bin/chcon -Rt container_file_t /opt/local-path-provisioner
 
             [Install]
             WantedBy=multi-user.target
