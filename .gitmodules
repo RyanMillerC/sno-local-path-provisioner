@@ -1,0 +1,4 @@
+[submodule "charts/local-path-provisioner"]
+	path = charts/local-path-provisioner
+	url = https://github.com/rancher/local-path-provisioner.git
+	branch = v0.0.x
