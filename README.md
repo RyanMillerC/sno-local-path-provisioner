@@ -30,17 +30,17 @@ To install, clone/enter this repo and run:
 $ make install
 ```
 
-**The chart creates a `MachineConfig` object that can take up to 5 minutes to
+**The chart creates a *MachineConfig* object that can take up to 5 minutes to
 deploy. Since SNO runs on a single node, the OpenShift console/API will both be
 temporarily unavailable while the MachineConfig is being applied.**
 
-Once complete, you will have a `local-path` StorageClass:
+Once complete, you will have a *local-path* StorageClass:
 
 ```bash
 $ oc get storageclass
 ```
 
-The chart does not set `local-path` as the default storage class. To set it as
+The chart does not set *local-path* as the default storage class. To set it as
 the default storage class, run:
 
 ```bash
