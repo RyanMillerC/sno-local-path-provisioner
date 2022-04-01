@@ -1,4 +1,5 @@
 # Overrides for local-path-provisioner subchart
 
-storageClass:
-  defaultClass: true
+local-path-provisioner:
+  storageClass:
+    defaultClass: true
