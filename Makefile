@@ -18,3 +18,4 @@ uninstall:
 	helm uninstall \
 	     --namespace local-path-storage \
 	     local-path-provisioner
+	oc delete project local-path-provisioner
